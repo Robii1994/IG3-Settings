@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$white: #fff;
+$primaryColor: #333;
+$blue: #5D67E9;
+$gray: #7B7B7B;
+$lightGray: #D5D5D5;
+$lightBlue: #E8F6FD;
+$red: #EA335E;
+$green: #2EA44E;
+$darkBlue: #133D91;
+
+
+/* ============ Icons Css Start =========== */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?pfmwut');
+    src:  url('../fonts/icomoon.eot?pfmwut#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?pfmwut') format('truetype'),
+      url('../fonts/icomoon.woff?pfmwut') format('woff'),
+      url('../fonts/icomoon.svg?pfmwut#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-classes:before {
+    content: "\e900";
+  }
+  .icon-dasboard:before {
+    content: "\e901";
+  }
+  .icon-institution:before {
+    content: "\e902";
+  }
+  .icon-profile:before {
+    content: "\e903";
+  }
+  .icon-teacher:before {
+    content: "\e90b";
+  }
+  .icon-down-arrow:before {
+    content: "\e904";
+  }
+  .icon-delete:before {
+    content: "\e905";
+  }
+  .icon-draw:before {
+    content: "\e906";
+  }
+  .icon-edit:before {
+    content: "\e907";
+  }
+  .icon-upload:before {
+    content: "\e908";
+  }
+  .icon-back:before {
+    content: "\e909";
+  }
+  .icon-add-user:before {
+    content: "\e90a";
+  }
+
+/* ============ Common Css Start =========== */
+
+@mixin button($padding, $bg){
+    padding: $padding;
+    background-color: $bg;
+    color: $white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+body{
+    font-size: 14px;
+    background-color: $white;
+    color: $primaryColor;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
+a{
+    text-decoration: none;
+}
+b{
+    font-weight: 500;
+}
+.form-control:focus, .btn:focus, .btn-close:focus{
+    outline: none;
+    box-shadow: none;
+}
+.scroll{
+    overflow-x: auto;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.mainBtn{
+    @include button(12px 20px, $green);
+    &:hover{
+        color: $white;
+    }
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    font-size: 14px;
+}
+.userBox{
+    .userLetter{
+        min-width: 40px;
+        height: 40px;
+        line-height: 40px;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: rgba(9,66,93, 0.74);
+        border-radius: 7px;
+    }
+    b{
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+}
+
+/* ============ Sidemenu Css Start =========== */
+
+.sideMenu{
+    background-color: $white;
+    height: 100vh;
+    width: 130px;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.32);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    .menuWrap{
+        li{
+            a{
+                min-height: 110px;
+                background-color: transparent;
+                color: $primaryColor;
+                border-bottom: solid 1px $lightGray;
+                transition: background-color .3s ease;
+                .icon{
+                    font-size: 43px;
+                    color: $gray;
+                    transition: color .3s ease;
+                }
+                p{
+                    margin: 10px 0 0;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+                &.active, &:hover{
+                    background-color: #F5F6FE;
+                    color: $blue;
+                    .icon{
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ============ Topbar Css Start =========== */
+
+.topbar{
+    padding: 15px 30px;
+    left: 130px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+    background: #fff;
+    right: 0;
+    .pageTitle{
+        h1{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    .mainBtn{
+        padding: 10px 17px;
+        background-color: $lightBlue;
+        border: solid 1px #D2E9F5;
+        color: #011F3B;
+        white-space: nowrap;
+    }
+    .userBox{
+        .userLetter{
+            min-width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            font-size: 16px;
+            line-height: 35px;
+            background: #637A88;
+        }
+        b{
+            font-size: 14px;
+        }
+    }
+}
+
+/* ============ Contentarea Css Start =========== */
+
+.mainContent{
+    margin-left: 130px;
+    margin-top: 75px;
+    padding: 0 30px 30px;
+}
+.status{
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 4px 13px;
+    &.active{
+        color: $green;
+        background-color: #E9F6ED;
+    }
+    &.delete{
+        color: $red;
+        background-color: #FEF3F5;
+    }
+}
+
+/* ============ Responsive Table Css Start =========== */
+
+.responsiveTable {
+    border: solid 1px #E4E4E4;
+    tr{
+        border-bottom: 1px solid #E4E4E4;
+    }
+    th, td{
+        padding: 10px 15px;
+    }
+    th{
+        text-transform: uppercase;
+        font-weight: 500;
+        position: sticky;
+        top: 0;
+        background-color: $lightBlue;
+    }
+    @media (max-width: 767px) {
+        border: 0;
+        font-size: 12px;
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            position: absolute;
+            width: 1px;
+        }
+        tr{
+            display: block;
+            margin-bottom: 10px;
+        }
+        td{
+            border-bottom: 1px solid #E4E4E4;
+            display: block;
+            text-align: right;
+            &:before{
+                content: attr(data-label);
+                float: left;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+/* ============ Color Box Css Start =========== */
+
+.colorBox{
+    background-color: $lightBlue;
+    border-radius: 15px;
+    padding: 30px 25px;
+    color: #09425D;
+    .userBox b{
+        font-weight: 600;
+    }
+    .head{
+        h2{
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .category{
+            font-size: 13px;
+            border: solid 1px #09425D;
+            border-radius: 5px;
+            padding: 7px 15px;
+            margin: 0;
+        }
+      }
+      .content{
+        p{
+            font-size: 18px;
+            margin: 3px 0 0 0;
+        }
+      }
+      .link{
+            color: #09425D;
+            font-size: 18px;
+            font-weight: 600;
+      }
+      &.profile{
+            background-color: #FAEAF4;
+            color: #5D093E;
+            .category{
+                border-color: #5D093E;
+            }
+            .link{
+                color: #5D093E;
+            }
+            .userBox{
+                .userLetter{
+                    background-color: rgba(93,9,62,0.74);
+                }
+            }
+        }
+  }
+
+.doubleBlock{
+    background-color: #57D2B5;
+    color: $white;
+    border-radius: 15px;
+    .sm-title{
+        font-size: 17px;
+        display: block;
+    }
+    .studentSec{
+        padding: 25px 35px;
+       .userBg{
+           width: 80px;
+           height: 80px;
+           background-color: rgba(255,255,255,0.40);
+           font-size: 38px;
+       }
+       .sm-title{
+           font-size: 19px;
+       }
+       span{
+           font-size: 40px;
+           font-weight: 700;
+       }
+       em{
+          font-size: 13px;
+          font-weight: 500;
+       }
+    }
+    .profileSec{
+        border-radius: 15px;
+        background: linear-gradient(to bottom, #886EFF 32%, #6149CD 100%);
+        padding: 37px 35px 37px 25px;
+        height: 100%;
+        p{
+            font-size: 13px;
+            line-height: 21px;
+        }
+        .mainBtn{
+            background-color: rgba(255,255,255,0.20);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+    }
+}
+
+.dashTable{
+    height: calc(100vh - 480px);
+}
+.heading{
+    h2{
+        font-size: 20px;
+    }
+    hr{
+        flex: 1;
+    }
+}
+
+
+/* ============ Modal Css Start =========== */
+
+.defaultModal{
+    .modal-header{
+        padding: 17px 27px;
+    }
+    .modal-header{
+        background-color: $darkBlue;
+        color: $white;
+        .modal-title{
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: .3px;
+        }
+        .btn-close{
+            color:$white;
+            opacity: .8;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .modal-body{
+        background-color: #FBFBFB;
+        padding: 20px 27px;
+        p{
+            line-height: 24px;
+        }
+        .download{
+            padding: 12px 30px;
+            background-color: $darkBlue;
+        }
+        .modalBtn{
+            @extend .download;
+            padding: 10px 20px;
+            background-color: $green;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background-color: #1f863b;
+            }
+        }
+        .classSpec{
+            background-color: $lightBlue;
+            border:solid 1px #D0E6F2;
+            color: #09425D;
+            border-radius: 3px;
+            padding: 10px 15px;
+            font-size: 15px;
+        }
+    }
+}
+
+/* ============ Modal Css End =========== */
+
+.defaultForm{
+    .form-label{
+        margin-bottom: 5px;
+        color: #000;
+    }
+    .form-control{
+        height: 45px;
+        border: solid 1px #DBDBDB;
+        font-size: 14px;
+        &[disabled]{
+            background-color: #ECEDF0;
+            color: #6a6c6f;
+            &:hover{
+                cursor: not-allowed;
+            }
+        }
+    }
+}
