@@ -133,12 +133,81 @@ b{
     &:hover{
         color: $white;
     }
+    &.color1{
+        color: $blue;
+        background: #EEF1FD;
+    }
+    &.color2{
+        color: #19AEFF;
+        background: #E7F7FF;
+    }
+    &.color3{
+        color: #EA335E;
+        background: #FFEDF4;
+    }
+    &.color4{
+        color: #FC5B00;
+        background: #FFEEE5;
+    }
+}
+.linkBtn{
+    color: $blue;
+    font-weight: 500;
+    font-size: 15px;
+    .icon{
+        font-size: 15px;
+        margin-top: -3px;
+    }
+    &:after{
+        width: 100%;
+        height: 1px;
+        background: $primaryColor;
+        content: "";
+        display: block;
+        transform: translateY(5px);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    &:hover{
+        &:after{
+            transform: translateY(2px);
+            opacity: .7;
+        }
+    }
+}
+.actionBtn{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 0;
+    font-size: 13px;
+    margin-right: 3px;
+    &.action{
+        border: solid 1px rgba(93,103,233, 0.62);
+        color: $blue;
+    }
+    &.delete{
+        border: solid 1px rgba(234,51,94, 0.62);
+        color: $red;
+        line-height: 25px;
+        font-size: 14px;
+    }
+}
+.alert-orange{
+    background: #FFEEE5;
+    border: solid 1px #FFE2D2;
+    padding: 10px; 
+    color: #FC5B00;
+    border-radius: 3px;
 }
 
 table{
     width: 100%;
     table-layout: fixed;
     font-size: 14px;
+    background: $white;
 }
 .userBox{
     .userLetter{
@@ -155,6 +224,9 @@ table{
         font-size: 15px;
         margin-bottom: 2px;
     }
+}
+.grayBg{
+    background: #F6F6F6;
 }
 
 /* ============ Sidemenu Css Start =========== */
@@ -178,6 +250,7 @@ table{
                 background-color: transparent;
                 color: $primaryColor;
                 border-bottom: solid 1px $lightGray;
+                border-left: solid 3px transparent;
                 transition: background-color .3s ease;
                 .icon{
                     font-size: 43px;
@@ -196,6 +269,9 @@ table{
                         color: $blue;
                     }
                 }
+                &.active{
+                    border-left-color: $blue;
+                }
             }
         }
     }
@@ -211,6 +287,7 @@ table{
     top: 0;
     background: #fff;
     right: 0;
+    z-index: 9;
     .pageTitle{
         h1{
             font-size: 20px;
@@ -245,9 +322,10 @@ table{
     margin-left: 130px;
     margin-top: 75px;
     padding: 0 30px 30px;
+    min-height: calc(100vh - 75px)
 }
 .status{
-    font-size: 12px;
+    font-size: 13px;
     border-radius: 20px;
     padding: 4px 13px;
     &.active{
@@ -268,13 +346,14 @@ table{
         border-bottom: 1px solid #E4E4E4;
     }
     th, td{
-        padding: 10px 15px;
+        padding: 11px 15px;
     }
     th{
         text-transform: uppercase;
         font-weight: 500;
         position: sticky;
         top: 0;
+        z-index: 5;
         background-color: $lightBlue;
     }
     @media (max-width: 767px) {
@@ -307,6 +386,13 @@ table{
                 border-bottom: 0;
             }
         }
+    }
+}
+table.white{
+    font-size: 16px;
+    th{
+        background: $white;
+        font-size: 13px;
     }
 }
 
@@ -447,17 +533,17 @@ table{
         p{
             line-height: 24px;
         }
-        .download{
-            padding: 12px 30px;
-            background-color: $darkBlue;
-        }
-        .modalBtn{
-            @extend .download;
+        .mainBtn{
             padding: 10px 20px;
-            background-color: $green;
-            transition: all .3s ease-in-out;
             &:hover{
                 background-color: #1f863b;
+            }
+        }
+        .download{
+            background-color: $darkBlue;
+            font-size: 13px;
+            &:hover{
+                background-color: #0d2b65;
             }
         }
         .classSpec{
@@ -485,9 +571,113 @@ table{
         &[disabled]{
             background-color: #ECEDF0;
             color: #6a6c6f;
-            &:hover{
-                cursor: not-allowed;
+            cursor: not-allowed;
+        }
+    }
+    .form-select{
+        @extend .form-control;
+    }
+    .helpText{
+        font-size: 12px;
+        color: #828282;
+    }
+    .listBox{
+        background: #F8F8F8;
+        border: solid 1px #E9E9E9;
+        padding: 12px 10px;
+        border-radius: 3px;
+        .form-control, .form-select{
+            height: 40px;
+            font-size: 13px;
+        }
+        .inputBox{
+            background: $white;
+            border: solid 1px #DBDBDB;
+            border-radius: .25rem;
+            padding: 7px 10px;
+            font-size: 13px;
+            max-height: 250px;
+            overflow-x: auto;
+            li{
+                padding: 4px 0px;
             }
+            .actionBtn{
+                font-size: 20px;
+                font-weight: 400;
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                margin: 0;
+            }
+            &.addedList{
+                max-height: 310px;
+            }
+        }
+    }
+}
+
+
+.classTable{
+    height: calc(100vh - 170px);
+    table{
+        .mainBtn{
+            padding: 7px 18px;
+            font-size: 13px;
+            white-space: nowrap;
+            letter-spacing: 0;
+            .icon{
+                font-size: 11px;
+                margin-left: 2px;
+            }
+            &.active{
+                .icon{
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        tr td:nth-child(1), tr th:nth-child(1){
+            text-align: center;
+        }
+    }
+}
+
+.subTable-wrap{
+    padding: 0px 12px;
+    .subTable{
+        background: #F8F8F8;
+        border: solid 1px #EBEBEB;
+        border-radius: 3px;
+        text-align: left;
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            top: -14px;
+            right: 58px;
+            width: 0;
+            height: 0;
+            border-left: 13px solid transparent;
+            border-right: 13px solid transparent;
+            border-bottom: 14px solid #EBEBEB;
+        }
+        tbody tr:last-child{
+            border: none;
+        }
+        thead tr{
+            border-bottom-color: #D6D6D6;
+        }
+        th{
+            background: transparent;
+            font-weight: normal;
+            font-size: 14px;
+            color: #111;
+        }
+        th{
+            padding: 10px;
+            position: inherit;
+        }
+        td{
+            padding: 7px 10px;
         }
     }
 }

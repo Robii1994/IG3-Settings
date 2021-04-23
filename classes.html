@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="scss/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>IG3 Settings | Classes</title>
+  </head>
+  <body>
+
+    <main>
+        <!-- Sidemenu Start-->
+        <nav class="sideMenu">
+            <div class="logo mb-4 d-flex align-items-center justify-content-center">
+                <img src="images/logo.png" alt="">
+            </div>
+            <ul class="menuWrap">
+                <li>
+                    <a href="dashboard.html" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-dasboard"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="classes.html" class="d-flex align-items-center justify-content-center flex-column active">
+                        <i class="icon icon-classes"></i>
+                        <p>Classes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-teacher"></i>
+                        <p>Teacher</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-institution"></i>
+                        <p>Institution</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-profile"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>  
+        <!-- Sidemenu End-->
+
+        <!-- Topbar Start -->
+        <div class="topbar d-flex align-items-center">
+            <div class="pageTitle"><h1 class="m-0">Classes</h1></div>
+            <div class="ms-auto d-flex">
+                <a href="#" class="btn mainBtn me-md-4 me-2"><i class="icon icon-back me-1"></i> Back to MyIG3</a>
+                <div class="userBox d-flex align-items-center">
+                    <div class="userLetter text-uppercase text-center me-2">c</div>
+                    <b class="m-0">Christeena Usanova</b>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Right Block Start -->
+        <section class="mainContent grayBg">
+            <div class="row">
+                <div class="col text-end mt-3 mb-2">
+                    <button type="button" class="btn linkBtn" data-bs-toggle="modal" data-bs-target="#uploadUsers"><i class="icon icon-upload me-1"></i> Upload Users</button> |
+                    <button type="button" class="btn linkBtn" data-bs-toggle="modal" data-bs-target="#newClass">+ Add New Class</button>
+                </div>
+            </div>
+
+            <div class="classTable scroll">
+                <table class="responsiveTable white">
+                    <thead>
+                        <tr>
+                            <th width="100px">No</th>
+                            <th>Class Name</th>
+                            <th>No.of Students</th>
+                            <th width="10%">Add Students</th>
+                            <th width="10%">Edit Class</th>
+                            <th width="10%">Action</th>
+                            <th width="10%">View Students</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="No">1</td>
+                            <td data-label="Class Name">Debbie's class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4 active">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Sub table Start -->
+                        <tr>
+                            <td colspan="7">
+                                <div class="subTable-wrap">
+                                    <table class="subTable">
+                                        <thead>
+                                            <tr>
+                                                <th width="100px">No</th>
+                                                <th>Username</th>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Email</th>
+                                                <th width="12%">Grade</th>
+                                                <th width="10%">Status</th>
+                                                <th width="10%">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="No">1</td>
+                                                <td data-label="Username">aaryan_loftus</td>
+                                                <td data-label="First name">Aaryan</td>
+                                                <td data-label="Last name">Loftus</td>
+                                                <td data-label="Email">aaryan@msn.com</td>
+                                                <td data-label="Grade">Grade 1</td>
+                                                <td data-label="Status"><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button type="button" class="btn actionBtn action" data-bs-toggle="modal" data-bs-target="#editStudent"><i class="icon icon-draw"></i></button>
+                                                    <button type="button" class="btn actionBtn delete"><i class="icon icon-delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="No">2</td>
+                                                <td data-label="Username">aaryan_veach</td>
+                                                <td data-label="First name">Aaryan</td>
+                                                <td data-label="Last name">Veach</td>
+                                                <td data-label="Email">aaryanv@optonline.net</td>
+                                                <td data-label="Grade">Grade 2</td>
+                                                <td data-label="Status"><span class="status delete">Deleted</span></td>
+                                                <td>
+                                                    <button type="button" class="btn actionBtn action" data-bs-toggle="modal" data-bs-target="#editStudent"><i class="icon icon-draw"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="No">3</td>
+                                                <td data-label="Username">annika_snook</td>
+                                                <td data-label="First name">Addie</td>
+                                                <td data-label="Last name">Trimble</td>
+                                                <td data-label="Email">addie@mac.com</td>
+                                                <td data-label="Grade">Kindergarten</td>
+                                                <td data-label="Status"><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button type="button" class="btn actionBtn action" data-bs-toggle="modal" data-bs-target="#editStudent"><i class="icon icon-draw"></i></button>
+                                                    <button type="button" class="btn actionBtn delete"><i class="icon icon-delete"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Sub table End -->
+                        <tr>
+                            <td data-label="No">2</td>
+                            <td data-label="Class Name">Master's class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">3</td>
+                            <td data-label="Class Name">Jen Tile class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">4</td>
+                            <td data-label="Class Name">Simon Sais class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">5</td>
+                            <td data-label="Class Name">Peter Owt class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">6</td>
+                            <td data-label="Class Name">Hugh N. cry class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">7</td>
+                            <td data-label="Class Name">Lee Nonmi class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">8</td>
+                            <td data-label="Class Name">Jen Tile class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">9</td>
+                            <td data-label="Class Name">Simon Sais class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">10</td>
+                            <td data-label="Class Name">Peter Owt class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">11</td>
+                            <td data-label="Class Name">Hugh N. cry class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">12</td>
+                            <td data-label="Class Name">Lee Nonmi class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">13</td>
+                            <td data-label="Class Name">Simon Sais class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">14</td>
+                            <td data-label="Class Name">Peter Owt class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">15</td>
+                            <td data-label="Class Name">Hugh N. cry class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">16</td>
+                            <td data-label="Class Name">Lee Nonmi class</td>
+                            <td data-label="No.of Students">3 Student(s)</td>
+                            <td data-label="Add Students">
+                                <button type="button" class="btn mainBtn color1" data-bs-toggle="modal" data-bs-target="#newStudent">Add</button>
+                            </td>
+                            <td data-label="Edit Class">
+                                <button type="button" class="btn mainBtn color2" data-bs-toggle="modal" data-bs-target="#editClass">Edit</button>
+                            </td>
+                            <td data-label="Action">
+                                <button type="button" class="btn mainBtn color3">Delete</button>
+                            </td>
+                            <td data-label="View Students">
+                                <button type="button" class="btn mainBtn color4">View <i class="icon icon-down-arrow"></i></button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Right Block End -->
+
+        <!-- Upload Users Modal Start-->
+        <div class="modal fade defaultModal" id="uploadUsers" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content"> 
+                    <div class="modal-header">       
+                        <h5 class="modal-title" id="staticBackdropLabel">Upload users</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            The User Import system can be used to enter a large number of users/students, teachers/admins, and classes from a formatted spreadsheet (the file must be saved as a .CSV comma delimited file type).
+                        </p>
+                        <p>
+                            Please note, the Username and Password fields must contain only 0-9 a-z charcters, with a 5-character minimum - each username must be unique. To get started, click Download to see an example import file, open the file, then fill-in the appropriate data for your institution and save. Click Import Now to locate your saved import file and upload the data into the system.
+                        </p>
+                        <p>
+                            For the "Record Type" field, please use "admin" to import a teacher and "user" when importing student users.
+                        </p>
+
+                        <div class="text-center"><a href="#" class="btn mainBtn download mt-2 mb-2">Download sample template</a></div>
+                        <div class="row gx-3 d-flex align-items-end mb-3">
+                            <div class="col-md-7 mt-3">
+                                <label for="formFile" class="form-label">Upload your CSV</label>
+                                <input class="form-control form-control-sm" id="formFile" type="file">
+                            </div>
+                            <div class="col-md-5 d-grid mt-3">
+                                <button class="btn mainBtn"><i class="icon icon-upload me-1"></i> Upload Users</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Upload Users Modal End-->
+
+        <!-- Add New Student Modal Start-->
+        <div class="modal fade defaultModal" id="newStudent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content"> 
+                    <div class="modal-header">       
+                        <h5 class="modal-title" id="staticBackdropLabel">Add new student</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="defaultForm">
+                            <div class="alert alert-danger">Enter error message</div>
+                            <div class="alert alert-success">Enter Success message</div>
+
+                            <div class="classSpec mb-3">
+                                <b>Class:</b> Debbie's class
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control" placeholder="Enter Username" name="">
+                                <div class="invalid-feedback" style="display: block;">Enter error message</div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">First name</label>
+                                    <input type="text" class="form-control" placeholder="Enter first name" name="">
+                                    <div class="invalid-feedback" style="display: block;">Enter error message</div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Last name</label>
+                                    <input type="text" class="form-control" placeholder="Enter last name" name="">
+                                    <div class="invalid-feedback" style="display: block;">Enter error message</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" placeholder="Enter email address" name="">
+                                <div class="invalid-feedback" style="display: block;">Enter error message</div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Grade</label>
+                                    <select class="form-select">
+                                        <option value="">-- Select Grade --</option>
+                                        <option value="">Grade 1</option>
+                                        <option value="">Grade 2</option>
+                                        <option value="">Kindergarten</option>
+                                    </select>
+                                    <div class="invalid-feedback" style="display: block;">Enter error message</div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Status</label>
+                                    <select class="form-select">
+                                        <option value="">Active</option>
+                                        <option value="">Deleted</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" name="">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Confirm password</label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" name="">
+                                </div>
+                            </div>
+                            <div class="d-grid mt-1">
+                                <button class="btn mainBtn text-uppercase" type="button">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add New Student Modal End-->
+
+        <!-- Edit Student Modal Start-->
+        <div class="modal fade defaultModal" id="editStudent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content"> 
+                    <div class="modal-header">       
+                        <h5 class="modal-title" id="staticBackdropLabel">Edit student details</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="classSpec mb-3">
+                            <b>Class:</b> Debbie's class
+                        </div>
+                        <form action="" class="defaultForm">
+                            <div class="mb-3">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control" value="aaryan_loftus" name="" disabled>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">First name</label>
+                                    <input type="text" class="form-control" value="Aaryan" name="">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Last name</label>
+                                    <input type="text" class="form-control" value="Loftus" name="">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" value="aaryan@msn.com" name="">
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Grade</label>
+                                    <select class="form-select">
+                                        <option value="">Grade 1</option>
+                                        <option value="">Grade 2</option>
+                                        <option value="">Kindergarten</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Status</label>
+                                    <select class="form-select">
+                                        <option value="">Active</option>
+                                        <option value="">Deleted</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" name="">
+                                    <em class="helpText">Enter only if you want to change</em>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Confirm password</label>
+                                    <input type="password" class="form-control" placeholder="Enter Password" name="">
+                                </div>
+                            </div>
+                            <div class="d-grid mt-1">
+                                <button class="btn mainBtn text-uppercase" type="button">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Student Modal End-->
+
+        <!-- Add New Class Modal Start-->
+        <div class="modal fade defaultModal" id="newClass" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content"> 
+                    <div class="modal-header">       
+                        <h5 class="modal-title" id="staticBackdropLabel">Add new class</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="defaultForm">
+                            <div class="mb-3">
+                                <label class="form-label">Class name</label>
+                                <input type="text" class="form-control" placeholder="Enter class name" name="">
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Available students</label>
+                                    <div class="listBox">
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control" placeholder="Filter by student name" name="">
+                                        </div>
+                                        <div class="mb-2">
+                                            <select class="form-select">
+                                                <option value="">Filter by Grade</option>
+                                                <option value="">Grade 1</option>
+                                                <option value="">Grade 2</option>
+                                                <option value="">Kindergarten</option>
+                                            </select>
+                                        </div>
+                                        <div class="inputBox">
+                                            <ul>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Students in class</label>
+                                    <div class="listBox">
+                                        <div class="alert-orange">No Students enrolled</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid mt-1">
+                                <button class="btn mainBtn text-uppercase" type="button">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add New Class Modal End-->
+
+        <!-- Edit Class Modal Start-->
+        <div class="modal fade defaultModal" id="editClass" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content"> 
+                    <div class="modal-header">       
+                        <h5 class="modal-title" id="staticBackdropLabel">Edit class</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="defaultForm">
+                            <div class="mb-3">
+                                <label class="form-label">Class name</label>
+                                <input type="text" class="form-control" placeholder="Enter class name" name="">
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Available students</label>
+                                    <div class="listBox">
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control" placeholder="Filter by student name" name="">
+                                        </div>
+                                        <div class="mb-2">
+                                            <select class="form-select">
+                                                <option value="">Filter by Grade</option>
+                                                <option value="">Grade 1</option>
+                                                <option value="">Grade 2</option>
+                                                <option value="">Kindergarten</option>
+                                            </select>
+                                        </div>
+                                        <div class="inputBox">
+                                            <ul>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn action p-0 ms-auto">+</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Students in class</label>
+                                    <div class="listBox">
+                                        <div class="inputBox addedList">
+                                            <ul>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn delete p-0 ms-auto">-</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Veach</span>
+                                                    <button type="" class="btn actionBtn delete p-0 ms-auto">-</button>
+                                                </li>
+                                                <li class="d-flex align-items-center">
+                                                    <span>Aaryan Loftus</span>
+                                                    <button type="" class="btn actionBtn delete p-0 ms-auto">-</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid mt-1">
+                                <button class="btn mainBtn text-uppercase" type="button">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Edit Class Modal End-->
+    </main>
+    
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
