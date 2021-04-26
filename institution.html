@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="scss/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>IG3 Settings | Institution</title>
+  </head>
+  <body>
+
+    <main>
+        <!-- Sidemenu Start-->
+        <nav class="sideMenu">
+            <div class="logo mb-4 d-flex align-items-center justify-content-center">
+                <img src="images/logo.png" alt="">
+            </div>
+            <ul class="menuWrap">
+                <li>
+                    <a href="dashboard.html" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-dasboard"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="classes.html" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-classes"></i>
+                        <p>Classes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-teacher"></i>
+                        <p>Teacher</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="institution.html" class="d-flex align-items-center justify-content-center flex-column active">
+                        <i class="icon icon-institution"></i>
+                        <p>Institution</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="d-flex align-items-center justify-content-center flex-column">
+                        <i class="icon icon-profile"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>  
+        <!-- Sidemenu End-->
+
+        <!-- Topbar Start -->
+        <div class="topbar d-flex align-items-center">
+            <div class="pageTitle"><h1 class="m-0">Institution</h1></div>
+            <div class="ms-auto d-flex">
+                <a href="#" class="btn mainBtn me-md-4 me-2"><i class="icon icon-back me-1"></i> Back to MyIG3</a>
+                <div class="userBox d-flex align-items-center">
+                    <div class="userLetter text-uppercase text-center me-2">c</div>
+                    <b class="m-0">Christeena Usanova</b>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Right Block Start -->
+        <section class="mainContent grayBg">
+            <div class="row">
+                <div class="col-md-8">
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6 mt-4">
+                            <div class="row doubleBlock g-0 h-100">
+                                <div class="col-md-6">
+                                    <div class="studentSec d-flex align-items-center flex-column">
+                                        <div class="userBg rounded-circle d-flex align-items-center justify-content-center mb-3">
+                                            <i class="icon icon-add-user"></i>
+                                        </div>
+                                        <div class="addStudent-content d-flex flex-column align-items-center text-center">
+                                            <b class="sm-title">Add Students</b>
+                                            <span>31</span>
+                                            <em>You have the license to add another 31 users</em>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="profileSec d-flex flex-column align-items-start">
+                                        <b class="sm-title mb-3">Upload Users</b>
+                                        <p class="mb-3">User Import system can be used to enter a large number of users/students.</p>
+                                        <button type="button" class="btn mainBtn mt-auto" data-bs-toggle="modal" data-bs-target="#uploadUsers"><i class="icon icon-upload me-1"></i> Upload Users</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-6 mt-4">
+                            <div class="colorBox profile h-100 d-flex flex-column">
+                                <div class="head d-flex mb-4 align-items-center">
+                                    <h2>Profile</h2>
+                                    <span class="category ms-auto">Teacher</span>
+                                </div>
+                                <div class="content mb-3">
+                                    <span>Username:</span>
+                                    <p>Christeenausanova</p>
+                                </div>
+                                <div class="userBox d-flex align-items-center mt-auto">
+                                    <div class="userLetter text-uppercase text-center me-2">c</div>
+                                    <div class="d-flex flex-column">
+                                        <b>Christeena Usanova</b>
+                                        <span>christeena23@gmail.com</span>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="#" class="link">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Right Block End -->
+
+        <!-- Upload Users Modal Start-->
+        <div class="modal fade defaultModal" id="uploadUsers" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content"> 
+                    <div class="modal-header">       
+                        <h5 class="modal-title" id="staticBackdropLabel">Upload users</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            The User Import system can be used to enter a large number of users/students, teachers/admins, and classes from a formatted spreadsheet (the file must be saved as a .CSV comma delimited file type).
+                        </p>
+                        <p>
+                            Please note, the Username and Password fields must contain only 0-9 a-z charcters, with a 5-character minimum - each username must be unique. To get started, click Download to see an example import file, open the file, then fill-in the appropriate data for your institution and save. Click Import Now to locate your saved import file and upload the data into the system.
+                        </p>
+                        <p>
+                            For the "Record Type" field, please use "admin" to import a teacher and "user" when importing student users.
+                        </p>
+
+                        <div class="text-center"><a href="#" class="btn mainBtn download mt-2 mb-2">Download sample template</a></div>
+                        <div class="row gx-3 d-flex align-items-end mb-3">
+                            <div class="col-md-7 mt-3">
+                                <label for="formFile" class="form-label">Upload your CSV</label>
+                                <input class="form-control form-control-sm" id="formFile" type="file">
+                            </div>
+                            <div class="col-md-5 d-grid mt-3">
+                                <button class="btn mainBtn"><i class="icon icon-upload me-1"></i> Upload Users</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Upload Users Modal End-->
+    </main>
+    
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
