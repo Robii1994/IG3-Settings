@@ -38,6 +38,15 @@ $darkBlue: #133D91;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .icon-color-user .path1:before {
+    content: "\e90c";
+    color: rgb(0, 165, 165);
+  }
+  .icon-color-user .path2:before {
+    content: "\e90d";
+    margin-left: -0.7841796875em;
+    color: rgb(237, 188, 148);
+  }
   .icon-classes:before {
     content: "\e900";
   }
@@ -84,7 +93,7 @@ $darkBlue: #133D91;
     border-radius: 5px;
     border: none;
     font-size: 14px;
-    letter-spacing: .5px;
+    letter-spacing: .2px;
 }
 
 body{
@@ -149,6 +158,9 @@ b{
         color: #FC5B00;
         background: #FFEEE5;
     }
+    &.blue{
+        background-color: $blue;
+    }
 }
 .linkBtn{
     color: $blue;
@@ -202,6 +214,9 @@ b{
     color: #FC5B00;
     border-radius: 3px;
 }
+.form-label{
+    margin-bottom: 5px;
+}
 
 table{
     width: 100%;
@@ -227,6 +242,9 @@ table{
 }
 .grayBg{
     background: #F6F6F6;
+}
+.h-100vh{
+    min-height: calc(100vh - 75px);
 }
 
 /* ============ Sidemenu Css Start =========== */
@@ -321,7 +339,7 @@ table{
 .mainContent{
     margin-left: 130px;
     margin-top: 75px;
-    padding: 0 30px 30px;
+    padding: 0 30px;
     min-height: calc(100vh - 75px)
 }
 .status{
@@ -529,7 +547,7 @@ table.white{
     }
     .modal-body{
         background-color: #FBFBFB;
-        padding: 20px 27px;
+        padding: 20px 27px 25px;
         p{
             line-height: 24px;
         }
@@ -561,7 +579,6 @@ table.white{
 
 .defaultForm{
     .form-label{
-        margin-bottom: 5px;
         color: #000;
     }
     .form-control{
@@ -678,6 +695,84 @@ table.white{
         }
         td{
             padding: 7px 10px;
+        }
+    }
+}
+
+.editContent-block{
+    background-color: $lightBlue;
+    padding: 40px 35px;
+    border-radius: 15px;
+    .editHead{
+        font-size: 20px;
+    }
+    p{
+        color: #6E6E6E;
+        margin: 0;
+    }
+}
+
+.profileWrapper{
+    padding: 50px;
+    margin: 0 15px 0 -30px;
+    height: 100%;
+    .profileMain{
+        padding: 50px;
+        border-radius: 15px;
+    }
+    .profileSec{
+        .userImg{
+            width: 90px;
+            height: 90px;
+            background: #C0E5E4;
+            font-size: 50px;
+        }
+    
+        .userDetails{
+            b{
+                display: block;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 3px;
+            }
+        }
+    }
+    .viewSec{
+        .viewItem{
+            margin-top: 30px;
+            .form-label{
+                color: #6E6E6E;
+            }
+            p{
+                font-size: 18px;
+                margin: 0;
+            }
+            hr{
+                background-color: #dadada;
+                opacity: 1;
+                margin-top: 11px;
+            }
+            .form-control {
+                outline: 0;
+                border-width: 0 0 1px;
+                border-color: #c7c7c7;
+                padding-bottom: 10px;
+                padding: 0 .75rem 10px 0;
+                border-radius: 0;
+                font-size: 18px;
+                height: auto;
+                transition: border-color .3s ease;
+                &:focus {
+                    border-color: $blue;
+                }
+                &[disabled]{
+                    background-color: #ECEDF0;
+                    color: #6a6c6f;
+                    cursor: not-allowed;
+                    padding: .375rem .75rem;
+                    border-radius: .25rem;
+                }
+            }
         }
     }
 }

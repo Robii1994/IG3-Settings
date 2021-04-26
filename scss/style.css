@@ -22,6 +22,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-color-user .path1:before {
+  content: "\e90c";
+  color: #00a5a5;
+}
+
+.icon-color-user .path2:before {
+  content: "\e90d";
+  margin-left: -0.7841796875em;
+  color: #edbc94;
+}
+
 .icon-classes:before {
   content: "\e900";
 }
@@ -129,7 +140,7 @@ b {
   border-radius: 5px;
   border: none;
   font-size: 14px;
-  letter-spacing: .5px;
+  letter-spacing: .2px;
 }
 
 .mainBtn:hover {
@@ -154,6 +165,10 @@ b {
 .mainBtn.color4 {
   color: #FC5B00;
   background: #FFEEE5;
+}
+
+.mainBtn.blue {
+  background-color: #5D67E9;
 }
 
 .linkBtn {
@@ -214,6 +229,10 @@ b {
   border-radius: 3px;
 }
 
+.form-label {
+  margin-bottom: 5px;
+}
+
 table {
   width: 100%;
   table-layout: fixed;
@@ -239,6 +258,10 @@ table {
 
 .grayBg {
   background: #F6F6F6;
+}
+
+.h-100vh {
+  min-height: calc(100vh - 75px);
 }
 
 /* ============ Sidemenu Css Start =========== */
@@ -331,7 +354,7 @@ table {
 .mainContent {
   margin-left: 130px;
   margin-top: 75px;
-  padding: 0 30px 30px;
+  padding: 0 30px;
   min-height: calc(100vh - 75px);
 }
 
@@ -562,7 +585,7 @@ table.white th {
 
 .defaultModal .modal-body {
   background-color: #FBFBFB;
-  padding: 20px 27px;
+  padding: 20px 27px 25px;
 }
 
 .defaultModal .modal-body p {
@@ -597,7 +620,6 @@ table.white th {
 
 /* ============ Modal Css End =========== */
 .defaultForm .form-label {
-  margin-bottom: 5px;
   color: #000;
 }
 
@@ -727,5 +749,88 @@ table.white th {
 
 .subTable-wrap .subTable td {
   padding: 7px 10px;
+}
+
+.editContent-block {
+  background-color: #E8F6FD;
+  padding: 40px 35px;
+  border-radius: 15px;
+}
+
+.editContent-block .editHead {
+  font-size: 20px;
+}
+
+.editContent-block p {
+  color: #6E6E6E;
+  margin: 0;
+}
+
+.profileWrapper {
+  padding: 50px;
+  margin: 0 15px 0 -30px;
+  height: 100%;
+}
+
+.profileWrapper .profileMain {
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.profileWrapper .profileSec .userImg {
+  width: 90px;
+  height: 90px;
+  background: #C0E5E4;
+  font-size: 50px;
+}
+
+.profileWrapper .profileSec .userDetails b {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.profileWrapper .viewSec .viewItem {
+  margin-top: 30px;
+}
+
+.profileWrapper .viewSec .viewItem .form-label {
+  color: #6E6E6E;
+}
+
+.profileWrapper .viewSec .viewItem p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.profileWrapper .viewSec .viewItem hr {
+  background-color: #dadada;
+  opacity: 1;
+  margin-top: 11px;
+}
+
+.profileWrapper .viewSec .viewItem .form-control, .profileWrapper .viewSec .viewItem .defaultForm .form-select, .defaultForm .profileWrapper .viewSec .viewItem .form-select {
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #c7c7c7;
+  padding-bottom: 10px;
+  padding: 0 .75rem 10px 0;
+  border-radius: 0;
+  font-size: 18px;
+  height: auto;
+  transition: border-color .3s ease;
+}
+
+.profileWrapper .viewSec .viewItem .form-control:focus, .profileWrapper .viewSec .viewItem .defaultForm .form-select:focus, .defaultForm .profileWrapper .viewSec .viewItem .form-select:focus {
+  border-color: #5D67E9;
+}
+
+.profileWrapper .viewSec .viewItem .form-control[disabled], .profileWrapper .viewSec .viewItem .defaultForm .form-select[disabled], .defaultForm .profileWrapper .viewSec .viewItem .form-select[disabled] {
+  background-color: #ECEDF0;
+  color: #6a6c6f;
+  cursor: not-allowed;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
 }
 /*# sourceMappingURL=style.css.map */

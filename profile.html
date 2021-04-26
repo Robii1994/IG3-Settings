@@ -8,7 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="scss/bootstrap.min.css">
     <link rel="stylesheet" href="scss/style.css">
-    <title>IG3 Settings | Institution</title>
+    <title>IG3 Settings | Profile</title>
   </head>
   <body>
 
@@ -38,13 +38,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="institution.html" class="d-flex align-items-center justify-content-center flex-column active">
+                    <a href="institution.html" class="d-flex align-items-center justify-content-center flex-column">
                         <i class="icon icon-institution"></i>
                         <p>Institution</p>
                     </a>
                 </li>
                 <li>
-                    <a href="profile.html" class="d-flex align-items-center justify-content-center flex-column">
+                    <a href="profile.html" class="d-flex align-items-center justify-content-center flex-column active">
                         <i class="icon icon-profile"></i>
                         <p>Profile</p>
                     </a>
@@ -55,7 +55,7 @@
 
         <!-- Topbar Start -->
         <div class="topbar d-flex align-items-center">
-            <div class="pageTitle"><h1 class="m-0">Institution</h1></div>
+            <div class="pageTitle"><h1 class="m-0">Profile</h1></div>
             <div class="ms-auto d-flex">
                 <a href="#" class="btn mainBtn me-md-4 me-2"><i class="icon icon-back me-1"></i> Back to MyIG3</a>
                 <div class="userBox d-flex align-items-center">
@@ -77,7 +77,7 @@
                                     <div class="icon-color-user"><span class="path1"></span><span class="path2"></span></div>
                                 </div>
                                 <div class="userDetails">
-                                    <b>Alexander Plyuto</b>
+                                    <b>Christeena Usanova</b>
                                     <span>School</span>
                                 </div>
                             </div>
@@ -86,25 +86,23 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="viewItem">
-                                                <label class="form-label">School name:</label>
-                                                <!-- <p>ICTE University of Queensland</p>
-                                                <hr> -->
-                                                <input type="text" name="" class="form-control" value="ICTE University of Queensland" disabled> <!-- For Disabled field -->
+                                                <label class="form-label">Username:</label>
+                                                <p>Christeenausanova</p>
+                                                <hr>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="viewItem">
-                                                <label class="form-label">Contact name:</label>
-                                                <!-- <p>Alexander Plyuto</p>
-                                                <hr> -->
-                                                <input type="text" name="" class="form-control" value="Alexander Plyuto"> <!-- For Editable field -->
+                                                <label class="form-label">Full name:</label>
+                                                <p>Christeena Usanova</p>
+                                                <hr>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="viewItem">
                                                 <label class="form-label">Contact email:</label>
-                                                <p>alexander23@yahoo.com</p> <!-- For View Content -->
-                                                <hr> <!-- For View Underline -->
+                                                <p>christeena23@gmail.com</p>
+                                                <hr>
                                             </div>
                                         </div>
                                     </div>
@@ -113,13 +111,11 @@
                             <div class="editContent-block mt-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
-                                        <h2 class="editHead mb-3">Edit your Institution Details</h2>
-                                        <p>it is possible to edit institution details, but it's irreversible, Please be sure that you would like to do that.</p>
+                                        <h2 class="editHead mb-3">Edit your profile</h2>
+                                        <p>it is possible to edit your account, but it's irreversible, Please be sure that you would like to do that.</p>
                                     </div>
                                     <div class="col-md-4 text-end">
-                                        <!-- Modal Button -->
-                                        <!-- <button type="button" class="btn mainBtn blue" data-bs-toggle="modal" data-bs-target="#editInstitution"><i class="icon icon-edit me-1"></i> Edit Institution</button> -->
-                                        <button type="button" class="btn mainBtn blue"><i class="icon icon-edit me-1"></i> Edit Institution</button>
+                                        <button type="button" class="btn mainBtn blue" data-bs-toggle="modal" data-bs-target="#editProfile"><i class="icon icon-edit me-1"></i>Edit Profile</button>
                                     </div>
                                 </div>
                             </div>
@@ -216,27 +212,44 @@
         </div>
         <!-- Upload Users Modal End-->
 
-        <!-- Edit Institution Modal Start-->
-        <!-- <div class="modal fade defaultModal" id="editInstitution" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <!--Edit Profile Modal Start-->
+        <div class="modal fade defaultModal" id="editProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content"> 
                     <div class="modal-header">       
-                        <h5 class="modal-title" id="staticBackdropLabel">Edit Institution</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Edit Profile</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="" class="defaultForm">
                             <div class="mb-3">
-                                <label class="form-label">School name</label>
-                                <input type="text" class="form-control" value="ICTE University of Queensland" disabled>
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control" value="Christeenausanova" disabled>
+                            </div>
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">First name</label>
+                                    <input type="text" class="form-control" value="Christeena">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Last name</label>
+                                    <input type="name" class="form-control" value="Usanova">
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Contact name</label>
-                                <input type="text" class="form-control" value="Alexander Plyuto">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" value="christeena23@gmail.com">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Contact email</label>
-                                <input type="email" class="form-control" value="alexander23@yahoo.com">
+                            <div class="row gx-3">
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="">
+                                    <em class="helpText">Enter only if you want to change</em>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label class="form-label">Confirm password</label>
+                                    <input type="password" class="form-control" name="">
+                                </div>
                             </div>
                             <div class="d-grid mt-1">
                                 <button class="btn mainBtn text-uppercase" type="button">Update</button>
@@ -245,8 +258,8 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- Edit Institution Modal End-->
+        </div>
+        <!-- Edit Profile Modal End-->
     </main>
     
 
