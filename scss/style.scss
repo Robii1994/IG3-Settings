@@ -121,6 +121,7 @@ b{
 }
 .scroll{
     overflow-x: auto;
+    border: solid 1px #E4E4E4;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -359,9 +360,11 @@ table{
 /* ============ Responsive Table Css Start =========== */
 
 .responsiveTable {
-    border: solid 1px #E4E4E4;
     tr{
         border-bottom: 1px solid #E4E4E4;
+        &:last-child{
+            border-bottom: none;
+        }
     }
     th, td{
         padding: 11px 15px;
