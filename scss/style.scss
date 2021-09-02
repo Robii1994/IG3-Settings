@@ -23,9 +23,8 @@ $darkBlue: #133D91;
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
+} 
+[class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon' !important;
     font-style: normal;
     font-weight: normal;
@@ -36,7 +35,7 @@ $darkBlue: #133D91;
     vertical-align: middle;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
   .icon-color-user .path1:before {
     content: "\e90c";
@@ -94,6 +93,9 @@ $darkBlue: #133D91;
     border: none;
     font-size: 14px;
     letter-spacing: .2px;
+    @media (max-width: 1024px){
+        font-size: 13px;
+    }
 }
 
 body{
@@ -120,23 +122,25 @@ b{
     box-shadow: none;
 }
 .scroll{
-    overflow-x: auto;
+    overflow: auto;
     border: solid 1px #E4E4E4;
 }
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-  border-radius: 10px;
+    background: #f3f1ec;
 }
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 10px;
+    background: #a19894;
+    border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+* {
+    scrollbar-width: thin;
 }
+
+
 
 .mainBtn{
     @include button(12px 20px, $green);
@@ -221,9 +225,12 @@ b{
 
 table{
     width: 100%;
-    table-layout: fixed;
+    // table-layout: fixed;
     font-size: 14px;
     background: $white;
+    @media (max-width: 1024px){
+        font-size: 13px;
+    }
 }
 .userBox{
     .userLetter{
@@ -311,6 +318,9 @@ table{
         h1{
             font-size: 20px;
             font-weight: 500;
+            @media (max-width: 1024px){
+                font-size: 18px;
+            }
         }
     }
     .mainBtn{
@@ -332,6 +342,9 @@ table{
         b{
             font-size: 14px;
         }
+        @media (max-width: 1024px){
+            font-size: 14px;
+        }
     }
 }
 
@@ -341,12 +354,18 @@ table{
     margin-left: 130px;
     margin-top: 75px;
     padding: 0 30px;
-    min-height: calc(100vh - 75px)
+    min-height: calc(100vh - 75px);
+    @media (max-width: 1024px){
+        padding: 0 20px;
+    }
 }
 .status{
     font-size: 13px;
     border-radius: 20px;
     padding: 4px 13px;
+    @media (max-width: 1024px){
+        font-size: 12px;
+    }
     &.active{
         color: $green;
         background-color: #E9F6ED;
@@ -376,44 +395,27 @@ table{
         top: 0;
         z-index: 5;
         background-color: $lightBlue;
+        white-space: nowrap;
     }
-    @media (max-width: 767px) {
-        border: 0;
-        font-size: 12px;
-        thead {
-            border: none;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            position: absolute;
-            width: 1px;
-        }
-        tr{
-            display: block;
-            margin-bottom: 10px;
-        }
-        td{
-            border-bottom: 1px solid #E4E4E4;
-            display: block;
-            text-align: right;
-            &:before{
-                content: attr(data-label);
-                float: left;
-                font-weight: 600;
-                text-transform: uppercase;
-            }
-            &:last-child{
-                border-bottom: 0;
-            }
+    @media (max-width: 991px){
+        th, td{
+            padding: 11px 7px;
         }
     }
 }
 table.white{
-    font-size: 16px;
+    @media (min-width: 1200px){
+        font-size: 16px;
+    }
     th{
         background: $white;
         font-size: 13px;
+        border-bottom: solid 1px #d8d8d8;
+        &:first-child{
+            @media (max-width: 991px){
+                width: 50px !important;
+            }
+        }
     }
 }
 
@@ -450,6 +452,7 @@ table.white{
             color: #09425D;
             font-size: 18px;
             font-weight: 600;
+            padding-left: 7px;
       }
       &.profile{
             background-color: #FAEAF4;
@@ -463,6 +466,13 @@ table.white{
             .userBox{
                 .userLetter{
                     background-color: rgba(93,9,62,0.74);
+                }
+            }
+        }
+        @media (max-width:1366px){
+            .head{
+                h2{
+                    font-size: 27px;
                 }
             }
         }
@@ -511,10 +521,40 @@ table.white{
             white-space: nowrap;
         }
     }
+    @media (max-width:1366px){
+        .studentSec{
+            padding: 25px 15px;
+            .sm-title{
+                font-size: 16px;
+            }
+            span{
+                font-size: 32px;
+            }
+            .userBg{
+                width: 75px;
+                height: 75px;
+                font-size: 32px;
+            }
+        }
+        .profileSec{
+            padding: 28px 25px 28px 20px;
+            .mainBtn{
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 .dashTable{
-    height: calc(100vh - 480px);
+    max-height: calc(100vh - 480px);
+    margin-bottom: 30px;
+    @media (max-width: 1366px){
+        max-height: calc(100vh - 450px);
+    }
+    @media (max-width: 1199px){
+        max-height: calc(100vh - 110px);
+    }
 }
 .heading{
     h2{
@@ -638,7 +678,7 @@ table.white{
 
 
 .classTable{
-    height: calc(100vh - 170px);
+    max-height: calc(100vh - 170px);
     table{
         .mainBtn{
             padding: 7px 18px;
@@ -679,6 +719,12 @@ table.white{
             border-left: 13px solid transparent;
             border-right: 13px solid transparent;
             border-bottom: 14px solid #EBEBEB;
+            @media (max-width: 1550px){
+                right: 20px;
+            }
+            @media (max-width: 991px){
+                right: 50px;
+            }
         }
         tbody tr:last-child{
             border: none;
@@ -698,6 +744,9 @@ table.white{
         }
         td{
             padding: 7px 10px;
+            &:last-child{
+                white-space: nowrap;
+            }
         }
     }
 }
@@ -706,6 +755,9 @@ table.white{
     background-color: $lightBlue;
     padding: 40px 35px;
     border-radius: 15px;
+    @media (max-width: 991px){
+        padding: 30px;
+    }
     .editHead{
         font-size: 20px;
     }
@@ -719,9 +771,22 @@ table.white{
     padding: 50px;
     margin: 0 15px 0 -30px;
     height: 100%;
+    @media (max-width: 1366px){
+        padding: 30px;
+        margin: 0 0px 0 -30px;
+    }
+    @media (max-width: 1199px){
+        margin: 0 -30px;
+    }
+    @media (max-width: 1024px){
+        margin: 0 -20px;
+    }
     .profileMain{
         padding: 50px;
         border-radius: 15px;
+        @media (max-width: 1366px){
+            padding: 30px;
+        }
     }
     .profileSec{
         .userImg{
@@ -779,3 +844,69 @@ table.white{
         }
     }
 }
+
+.loader-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.01);
+  
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center;
+  
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+  }
+  .spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4160F5;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% {
+      -webkit-transform: scale(0);
+    }
+    50% {
+      -webkit-transform: scale(1);
+    }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% {
+      transform: scale(0);
+      -webkit-transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+    }
+  }

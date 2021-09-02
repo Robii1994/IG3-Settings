@@ -1,0 +1,259 @@
+.licLabel {
+  font-weight: 500;
+  display: block;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 2px 0;
+}
+
+.licLabel::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.licLabel.math {
+  color: #FC6D00;
+}
+
+.licLabel.math::before {
+  background: #FC6D00;
+}
+
+.licLabel.english {
+  color: #6647BF;
+}
+
+.licLabel.english::before {
+  background: #6647BF;
+}
+
+.roundedLabel {
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  padding: 2px 9px;
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.roundedLabel.public {
+  background: #51459F;
+}
+
+.roundedLabel.private {
+  background: #079698;
+}
+
+.roundedLabel.active {
+  background: #2EA44E;
+}
+
+.roundedLabel.draft {
+  background: #F83F3F;
+}
+
+.primaryBtn {
+  padding: 9px 20px;
+  background-color: #2EA44E;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
+  transition: background .3s ease;
+}
+
+.primaryBtn .icon {
+  font-size: 11px;
+  margin-right: 2px;
+}
+
+.primaryBtn:hover {
+  background-color: #1f863b;
+  color: #fff;
+}
+
+.primaryBtn.default {
+  background-color: #09425D;
+}
+
+.primaryBtn.default:hover {
+  background-color: #166b94;
+}
+
+.primaryBtn.red {
+  background-color: #E2180C;
+}
+
+.primaryBtn.edit {
+  background: linear-gradient(#0ABD83, #0E956F);
+}
+
+.heading h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.heading hr {
+  flex: 1;
+  margin: 0 0 0 15px;
+}
+
+.customRadio .item {
+  margin-right: 27px;
+}
+
+.customRadio .item:last-child {
+  margin-right: 0;
+}
+
+.customRadio [type="radio"]:checked,
+.customRadio [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.customRadio [type="radio"]:checked + label,
+.customRadio [type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  line-height: 22px;
+  display: inline-block;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.customRadio [type="radio"]:checked + label:before,
+.customRadio [type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #999;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.customRadio [type="radio"]:checked + label:after,
+.customRadio [type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #5D67E9;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+.customRadio [type="radio"]:checked + label:before {
+  border-color: #5D67E9;
+}
+
+.customRadio [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.customRadio [type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.primaryBlock {
+  background-color: #E8F6FD;
+  border: solid 1px #D2E9F5;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.primaryBlock > h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 13px;
+  letter-spacing: -.5px;
+}
+
+.primaryBlock.secondary {
+  background-color: #FAEAF4;
+  border-color: #F1E4EC;
+}
+
+.primaryItem {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: solid 1px #EFEFEF;
+}
+
+.primaryItem .itemHead {
+  margin-bottom: 7px;
+}
+
+.primaryItem .itemHead .itemTitle {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.primaryItem .itemContent {
+  margin-bottom: 13px;
+}
+
+.primaryItem .itemContent li {
+  margin: 10px 0;
+}
+
+.primaryItem .itemContent li span {
+  white-space: nowrap;
+}
+
+.primaryItem .itemContent li hr {
+  flex: 1;
+  margin: 0 15px;
+  opacity: .2;
+}
+
+.primaryItem .itemContent li b {
+  text-align: right;
+  font-weight: 500;
+}
+
+.controlsBlock .searchBox {
+  margin-left: 30px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.controlsBlock .searchBox .form-control {
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+  border-color: #B8B8B8;
+}
+
+.controlsBlock .searchBox .btn {
+  border-radius: 0 5px 5px 0;
+  padding: 9px 15px;
+  background: #5D67E9;
+}
+
+.publicBlock {
+  margin: 0 0 30px;
+}
+
+.publicBlock .publicWrap .primaryItem {
+  border-color: #e0e0e0;
+  padding: 20px 17px;
+}
+/*# sourceMappingURL=curriculum.css.map */

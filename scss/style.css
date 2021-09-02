@@ -112,26 +112,26 @@ b {
 }
 
 .scroll {
-  overflow-x: auto;
+  overflow: auto;
   border: solid 1px #E4E4E4;
 }
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+  background: #f3f1ec;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #a19894;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+* {
+  scrollbar-width: thin;
 }
 
 .mainBtn {
@@ -142,6 +142,12 @@ b {
   border: none;
   font-size: 14px;
   letter-spacing: .2px;
+}
+
+@media (max-width: 1024px) {
+  .mainBtn {
+    font-size: 13px;
+  }
 }
 
 .mainBtn:hover {
@@ -236,9 +242,14 @@ b {
 
 table {
   width: 100%;
-  table-layout: fixed;
   font-size: 14px;
   background: #fff;
+}
+
+@media (max-width: 1024px) {
+  table {
+    font-size: 13px;
+  }
 }
 
 .userBox .userLetter {
@@ -330,6 +341,12 @@ table {
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  .topbar .pageTitle h1 {
+    font-size: 18px;
+  }
+}
+
 .topbar .mainBtn {
   padding: 10px 17px;
   background-color: #E8F6FD;
@@ -351,6 +368,12 @@ table {
   font-size: 14px;
 }
 
+@media (max-width: 1024px) {
+  .topbar .userBox {
+    font-size: 14px;
+  }
+}
+
 /* ============ Contentarea Css Start =========== */
 .mainContent {
   margin-left: 130px;
@@ -359,10 +382,22 @@ table {
   min-height: calc(100vh - 75px);
 }
 
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 0 20px;
+  }
+}
+
 .status {
   font-size: 13px;
   border-radius: 20px;
   padding: 4px 13px;
+}
+
+@media (max-width: 1024px) {
+  .status {
+    font-size: 12px;
+  }
 }
 
 .status.active {
@@ -395,49 +430,31 @@ table {
   top: 0;
   z-index: 5;
   background-color: #E8F6FD;
+  white-space: nowrap;
 }
 
-@media (max-width: 767px) {
-  .responsiveTable {
-    border: 0;
-    font-size: 12px;
-  }
-  .responsiveTable thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-  }
-  .responsiveTable tr {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .responsiveTable td {
-    border-bottom: 1px solid #E4E4E4;
-    display: block;
-    text-align: right;
-  }
-  .responsiveTable td:before {
-    content: attr(data-label);
-    float: left;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .responsiveTable td:last-child {
-    border-bottom: 0;
+@media (max-width: 991px) {
+  .responsiveTable th, .responsiveTable td {
+    padding: 11px 7px;
   }
 }
 
-table.white {
-  font-size: 16px;
+@media (min-width: 1200px) {
+  table.white {
+    font-size: 16px;
+  }
 }
 
 table.white th {
   background: #fff;
   font-size: 13px;
+  border-bottom: solid 1px #d8d8d8;
+}
+
+@media (max-width: 991px) {
+  table.white th:first-child {
+    width: 50px !important;
+  }
 }
 
 /* ============ Color Box Css Start =========== */
@@ -474,6 +491,7 @@ table.white th {
   color: #09425D;
   font-size: 18px;
   font-weight: 600;
+  padding-left: 7px;
 }
 
 .colorBox.profile {
@@ -491,6 +509,12 @@ table.white th {
 
 .colorBox.profile .userBox .userLetter {
   background-color: rgba(93, 9, 62, 0.74);
+}
+
+@media (max-width: 1366px) {
+  .colorBox .head h2 {
+    font-size: 27px;
+  }
 }
 
 .doubleBlock {
@@ -547,8 +571,45 @@ table.white th {
   white-space: nowrap;
 }
 
+@media (max-width: 1366px) {
+  .doubleBlock .studentSec {
+    padding: 25px 15px;
+  }
+  .doubleBlock .studentSec .sm-title {
+    font-size: 16px;
+  }
+  .doubleBlock .studentSec span {
+    font-size: 32px;
+  }
+  .doubleBlock .studentSec .userBg {
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+  }
+  .doubleBlock .profileSec {
+    padding: 28px 25px 28px 20px;
+  }
+  .doubleBlock .profileSec .mainBtn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
 .dashTable {
-  height: calc(100vh - 480px);
+  max-height: calc(100vh - 480px);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1366px) {
+  .dashTable {
+    max-height: calc(100vh - 450px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .dashTable {
+    max-height: calc(100vh - 110px);
+  }
 }
 
 .heading h2 {
@@ -681,7 +742,7 @@ table.white th {
 }
 
 .classTable {
-  height: calc(100vh - 170px);
+  max-height: calc(100vh - 170px);
 }
 
 .classTable table .mainBtn {
@@ -728,6 +789,18 @@ table.white th {
   border-bottom: 14px solid #EBEBEB;
 }
 
+@media (max-width: 1550px) {
+  .subTable-wrap .subTable:after {
+    right: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .subTable-wrap .subTable:after {
+    right: 50px;
+  }
+}
+
 .subTable-wrap .subTable tbody tr:last-child {
   border: none;
 }
@@ -752,10 +825,20 @@ table.white th {
   padding: 7px 10px;
 }
 
+.subTable-wrap .subTable td:last-child {
+  white-space: nowrap;
+}
+
 .editContent-block {
   background-color: #E8F6FD;
   padding: 40px 35px;
   border-radius: 15px;
+}
+
+@media (max-width: 991px) {
+  .editContent-block {
+    padding: 30px;
+  }
 }
 
 .editContent-block .editHead {
@@ -773,9 +856,34 @@ table.white th {
   height: 100%;
 }
 
+@media (max-width: 1366px) {
+  .profileWrapper {
+    padding: 30px;
+    margin: 0 0px 0 -30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .profileWrapper {
+    margin: 0 -30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profileWrapper {
+    margin: 0 -20px;
+  }
+}
+
 .profileWrapper .profileMain {
   padding: 50px;
   border-radius: 15px;
+}
+
+@media (max-width: 1366px) {
+  .profileWrapper .profileMain {
+    padding: 30px;
+  }
 }
 
 .profileWrapper .profileSec .userImg {
@@ -833,5 +941,52 @@ table.white th {
   cursor: not-allowed;
   padding: .375rem .75rem;
   border-radius: .25rem;
+}
+
+.loader-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.01);
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  display: flex !important;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4160F5;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */
