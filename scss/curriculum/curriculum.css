@@ -1,4 +1,16 @@
-.licLabel {
+.curriculumWrap {
+  position: relative;
+}
+
+.curriculumWrap .sectionTitle {
+  font-size: 18px;
+  color: #5D67E9;
+  font-weight: 500;
+  padding: 19px 0;
+  margin: 0;
+}
+
+.curriculumWrap .licLabel {
   font-weight: 500;
   display: block;
   font-size: 14px;
@@ -6,7 +18,7 @@
   padding: 2px 0;
 }
 
-.licLabel::before {
+.curriculumWrap .licLabel::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -15,23 +27,23 @@
   margin-right: 5px;
 }
 
-.licLabel.math {
+.curriculumWrap .licLabel.math {
   color: #FC6D00;
 }
 
-.licLabel.math::before {
+.curriculumWrap .licLabel.math::before {
   background: #FC6D00;
 }
 
-.licLabel.english {
+.curriculumWrap .licLabel.english {
   color: #6647BF;
 }
 
-.licLabel.english::before {
+.curriculumWrap .licLabel.english::before {
   background: #6647BF;
 }
 
-.roundedLabel {
+.curriculumWrap .roundedLabel {
   border-radius: 50px;
   color: #fff;
   font-size: 13px;
@@ -39,25 +51,31 @@
   white-space: nowrap;
   display: inline-block;
   margin-left: 2px;
+  background: #ccc;
 }
 
-.roundedLabel.public {
+.curriculumWrap .roundedLabel.public {
   background: #51459F;
 }
 
-.roundedLabel.private {
+.curriculumWrap .roundedLabel.private {
   background: #079698;
 }
 
-.roundedLabel.active {
+.curriculumWrap .roundedLabel.active {
   background: #2EA44E;
 }
 
-.roundedLabel.draft {
+.curriculumWrap .roundedLabel.draft {
   background: #F83F3F;
 }
 
-.primaryBtn {
+.curriculumWrap .roundedLabel.count {
+  background: #FC6D00;
+  font-size: 14px;
+}
+
+.curriculumWrap .primaryBtn {
   padding: 9px 20px;
   background-color: #2EA44E;
   color: #fff;
@@ -67,41 +85,373 @@
   transition: background .3s ease;
 }
 
-.primaryBtn .icon {
+.curriculumWrap .primaryBtn .icon {
   font-size: 11px;
   margin-right: 2px;
 }
 
-.primaryBtn:hover {
+.curriculumWrap .primaryBtn:hover {
   background-color: #1f863b;
   color: #fff;
 }
 
-.primaryBtn.default {
+.curriculumWrap .primaryBtn.default {
   background-color: #09425D;
 }
 
-.primaryBtn.default:hover {
+.curriculumWrap .primaryBtn.default:hover {
   background-color: #166b94;
 }
 
-.primaryBtn.red {
+.curriculumWrap .primaryBtn.red {
   background-color: #E2180C;
 }
 
-.primaryBtn.edit {
+.curriculumWrap .primaryBtn.edit {
   background: linear-gradient(#0ABD83, #0E956F);
 }
 
-.heading h2 {
+.curriculumWrap .heading h2 {
   font-size: 20px;
   font-weight: 500;
   margin: 0;
 }
 
-.heading hr {
+.curriculumWrap .heading hr {
   flex: 1;
   margin: 0 0 0 15px;
+}
+
+.curriculumWrap .primaryBlock {
+  background-color: #E8F6FD;
+  border: solid 1px #D2E9F5;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.curriculumWrap .primaryBlock > h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 13px;
+  letter-spacing: -.5px;
+}
+
+.curriculumWrap .primaryBlock.secondary {
+  background-color: #FAEAF4;
+  border-color: #F1E4EC;
+}
+
+.curriculumWrap .primaryItem {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: solid 1px #EFEFEF;
+}
+
+.curriculumWrap .primaryItem .itemHead {
+  margin-bottom: 7px;
+}
+
+.curriculumWrap .primaryItem .itemHead .itemTitle {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.curriculumWrap .primaryItem .itemContent {
+  margin-bottom: 13px;
+}
+
+.curriculumWrap .primaryItem .itemContent li {
+  margin: 10px 0;
+}
+
+.curriculumWrap .primaryItem .itemContent li span {
+  white-space: nowrap;
+}
+
+.curriculumWrap .primaryItem .itemContent li hr {
+  flex: 1;
+  margin: 0 15px;
+  opacity: .2;
+}
+
+.curriculumWrap .primaryItem .itemContent li b {
+  text-align: right;
+  font-weight: 500;
+}
+
+.curriculumWrap .controlsBlock .searchBox {
+  margin-left: 30px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.curriculumWrap .controlsBlock .searchBox .form-control {
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+  border-color: #B8B8B8;
+}
+
+.curriculumWrap .controlsBlock .searchBox .btn {
+  border-radius: 0 5px 5px 0;
+  padding: 9px 15px;
+  background: #5D67E9;
+}
+
+.curriculumWrap .publicBlock {
+  margin: 0 0 30px;
+}
+
+.curriculumWrap .publicBlock .publicWrap .primaryItem {
+  border-color: #e0e0e0;
+  padding: 20px 17px;
+}
+
+.accordion {
+  padding-bottom: 120px;
+}
+
+.accordion .accordion-item {
+  border: none;
+  border-bottom: solid 1px #DCDCDC;
+  margin-bottom: 0;
+}
+
+.accordion .accordion-item .accordion-header .accTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.accordion .accordion-item .accordion-header .roundedLabel {
+  margin-right: 30px;
+}
+
+.accordion .accordion-item .accordion-header .accordion-button {
+  width: auto;
+  border-left: solid 1px #DCDCDC;
+  border-right: solid 1px #DCDCDC;
+  padding: 24px 24px;
+}
+
+.accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background: #fff;
+  box-shadow: none;
+}
+
+.accordion .accordion-item .accordion-header .accordion-button::after {
+  width: 36px;
+  height: 36px;
+  border: solid 2px #424242;
+  background-position: center;
+  border-radius: 50%;
+  background-size: 18px;
+}
+
+.accordion .accordion-item .accordion-body {
+  padding: 20px;
+  background: #F6F8FE;
+  border: solid 1px #EFF2FC;
+}
+
+.accordion .accordion-item:nth-child(2) .accordion-body {
+  background: #FFF9FC;
+  border-color: #F9E5EA;
+}
+
+.accordion .accordion-item:nth-child(3) .accordion-body {
+  background: #FFFBEC;
+  border-color: #EFE0CA;
+}
+
+.grid-col {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.tabHead {
+  padding: 0px 30px;
+  background: #F6F8FE;
+  border: solid 1px #EFF2FC;
+  border-bottom-color: #DCDCDC;
+  margin: 0px -30px;
+}
+
+.tabHead .item {
+  border-bottom: solid 2px transparent;
+  padding: 13px 0;
+  font-size: 17px;
+  font-weight: 500;
+  margin-right: 25px;
+  color: #222;
+}
+
+.tabHead .item.active {
+  border-bottom-color: #5D67E9;
+}
+
+.tabHead .item:last-child {
+  margin-right: 0;
+}
+
+.tabHead .item .editBtn {
+  border: solid 2px #2AC055;
+  width: 31px;
+  height: 31px;
+  color: #2AC055;
+  padding: 0;
+  margin-left: 10px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.whiteBox {
+  border: solid 1px #DFDFDF;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 12px 12px;
+  cursor: pointer;
+}
+
+.whiteBox .title {
+  font-size: 16px;
+  font-weight: 500;
+  min-height: 50px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.whiteBox .bottomPanel {
+  border-top: solid 1px #d8d8d8;
+  padding-top: 10px;
+}
+
+.whiteBox .bottomPanel span {
+  font-size: 13px;
+}
+
+.whiteBox .bottomPanel .moreBtn {
+  padding: 7px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.whiteBox .bottomPanel .moreBtn span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  background: #818181;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.whiteBox .bottomPanel .moreBtn::after {
+  display: none;
+}
+
+.whiteBox .bottomPanel .moreBtn:focus {
+  outline: none;
+  background-color: #ececec;
+  border-radius: 3px;
+}
+
+.whiteBox .bottomPanel .moreItems {
+  border: solid 1px #E2E2E2;
+  box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.1);
+}
+
+.whiteBox .bottomPanel .moreItems li .btn {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  width: 100%;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn .icon {
+  font-size: 14px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  text-align: center;
+  color: #727272;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn .icon.icon-education {
+  font-size: 13px;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn.edit {
+  color: #2AC055;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn.edit .icon {
+  color: #2AC055;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn.delete {
+  color: #EB0101;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn.delete .icon {
+  color: #EB0101;
+  font-size: 15px;
+}
+
+.whiteBox.selected {
+  border-color: #5D67E9;
+}
+
+.publishBlock {
+  position: fixed;
+  left: 130px;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: 9;
+  padding: 15px 30px;
+  box-shadow: 0 0px 5px rgba(51, 51, 51, 0.24);
+}
+
+.publishBlock .primaryBtn {
+  white-space: nowrap;
+  padding: 13px 30px;
+  font-size: 15px;
+  border-radius: 3px;
+  letter-spacing: .5px;
+}
+
+.publishBlock .primaryBtn svg {
+  margin-left: 10px;
+}
+
+.publishBlock ul {
+  margin: 0 40px 0 20px;
+}
+
+.publishBlock ul li {
+  list-style: disc;
+  font-style: italic;
+  font-size: 13px;
+  color: #646464;
+  margin: 4px 0;
+}
+
+.customRadio {
+  padding: 5px 0;
 }
 
 .customRadio .item {
@@ -168,92 +518,5 @@
 .customRadio [type="radio"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
-}
-
-.primaryBlock {
-  background-color: #E8F6FD;
-  border: solid 1px #D2E9F5;
-  border-radius: 10px;
-  padding: 20px;
-  height: 100%;
-}
-
-.primaryBlock > h2 {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 13px;
-  letter-spacing: -.5px;
-}
-
-.primaryBlock.secondary {
-  background-color: #FAEAF4;
-  border-color: #F1E4EC;
-}
-
-.primaryItem {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  border: solid 1px #EFEFEF;
-}
-
-.primaryItem .itemHead {
-  margin-bottom: 7px;
-}
-
-.primaryItem .itemHead .itemTitle {
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-
-.primaryItem .itemContent {
-  margin-bottom: 13px;
-}
-
-.primaryItem .itemContent li {
-  margin: 10px 0;
-}
-
-.primaryItem .itemContent li span {
-  white-space: nowrap;
-}
-
-.primaryItem .itemContent li hr {
-  flex: 1;
-  margin: 0 15px;
-  opacity: .2;
-}
-
-.primaryItem .itemContent li b {
-  text-align: right;
-  font-weight: 500;
-}
-
-.controlsBlock .searchBox {
-  margin-left: 30px;
-  max-width: 320px;
-  width: 100%;
-}
-
-.controlsBlock .searchBox .form-control {
-  border-radius: 5px 0 0 5px;
-  font-size: 14px;
-  border-color: #B8B8B8;
-}
-
-.controlsBlock .searchBox .btn {
-  border-radius: 0 5px 5px 0;
-  padding: 9px 15px;
-  background: #5D67E9;
-}
-
-.publicBlock {
-  margin: 0 0 30px;
-}
-
-.publicBlock .publicWrap .primaryItem {
-  border-color: #e0e0e0;
-  padding: 20px 17px;
 }
 /*# sourceMappingURL=curriculum.css.map */
