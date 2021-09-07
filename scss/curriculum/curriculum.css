@@ -43,38 +43,6 @@
   background: #6647BF;
 }
 
-.curriculumWrap .roundedLabel {
-  border-radius: 50px;
-  color: #fff;
-  font-size: 13px;
-  padding: 2px 9px;
-  white-space: nowrap;
-  display: inline-block;
-  margin-left: 2px;
-  background: #ccc;
-}
-
-.curriculumWrap .roundedLabel.public {
-  background: #51459F;
-}
-
-.curriculumWrap .roundedLabel.private {
-  background: #079698;
-}
-
-.curriculumWrap .roundedLabel.active {
-  background: #2EA44E;
-}
-
-.curriculumWrap .roundedLabel.draft {
-  background: #F83F3F;
-}
-
-.curriculumWrap .roundedLabel.count {
-  background: #FC6D00;
-  font-size: 14px;
-}
-
 .curriculumWrap .primaryBtn {
   padding: 9px 20px;
   background-color: #2EA44E;
@@ -209,42 +177,47 @@
   padding: 20px 17px;
 }
 
-.accordion {
+.curriculumWrap .grid-col {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.curriculumWrap .accordion {
   padding-bottom: 120px;
 }
 
-.accordion .accordion-item {
+.curriculumWrap .accordion .accordion-item {
   border: none;
   border-bottom: solid 1px #DCDCDC;
   margin-bottom: 0;
 }
 
-.accordion .accordion-item .accordion-header .accTitle {
+.curriculumWrap .accordion .accordion-item .accordion-header .accTitle {
   font-size: 20px;
   font-weight: 500;
 }
 
-.accordion .accordion-item .accordion-header .roundedLabel {
+.curriculumWrap .accordion .accordion-item .accordion-header .roundedLabel {
   margin-right: 30px;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button {
+.curriculumWrap .accordion .accordion-item .accordion-header .accordion-button {
   width: auto;
   border-left: solid 1px #DCDCDC;
   border-right: solid 1px #DCDCDC;
   padding: 24px 24px;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button:focus {
+.curriculumWrap .accordion .accordion-item .accordion-header .accordion-button:focus {
   box-shadow: none;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.curriculumWrap .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background: #fff;
   box-shadow: none;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button::after {
+.curriculumWrap .accordion .accordion-item .accordion-header .accordion-button::after {
   width: 36px;
   height: 36px;
   border: solid 2px #424242;
@@ -253,25 +226,52 @@
   background-size: 18px;
 }
 
-.accordion .accordion-item .accordion-body {
+.curriculumWrap .accordion .accordion-item .accordion-body {
   padding: 20px;
   background: #F6F8FE;
   border: solid 1px #EFF2FC;
 }
 
-.accordion .accordion-item:nth-child(2) .accordion-body {
+.curriculumWrap .accordion .accordion-item:nth-child(2) .accordion-body {
   background: #FFF9FC;
   border-color: #F9E5EA;
 }
 
-.accordion .accordion-item:nth-child(3) .accordion-body {
+.curriculumWrap .accordion .accordion-item:nth-child(3) .accordion-body {
   background: #FFFBEC;
   border-color: #EFE0CA;
 }
 
-.grid-col {
-  flex: 0 0 auto;
-  width: 20%;
+.roundedLabel {
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  padding: 2px 9px;
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 2px;
+  background: #ccc;
+}
+
+.roundedLabel.public {
+  background: #51459F;
+}
+
+.roundedLabel.private {
+  background: #079698;
+}
+
+.roundedLabel.active {
+  background: #2EA44E;
+}
+
+.roundedLabel.draft {
+  background: #F83F3F;
+}
+
+.roundedLabel.count {
+  background: #FC6D00;
+  font-size: 14px;
 }
 
 .tabHead {
@@ -507,7 +507,7 @@
 }
 
 .customRadio [type="radio"]:checked + label:before {
-  border-color: #5D67E9;
+  border-color: #5D67E9 !important;
 }
 
 .customRadio [type="radio"]:not(:checked) + label:after {
@@ -518,5 +518,93 @@
 .customRadio [type="radio"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
+}
+
+.primaryModal {
+  max-width: 550px;
+}
+
+.primaryModal .modal-body {
+  padding: 30px 38px;
+}
+
+.primaryModal .roundedLabel {
+  color: #FC6D00;
+  border: solid 1px #FC6D00;
+  background: transparent;
+  font-size: 14px;
+  padding: 4px 15px;
+}
+
+.primaryModal .heading {
+  font-size: 24px;
+  font-weight: 500;
+  border-bottom: solid 1px #A1A1A1;
+  padding: 5px 0;
+}
+
+.primaryModal .breadcrumb {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0;
+  color: #666;
+}
+
+.primaryModal .selectionWrap {
+  border: solid 1px #CFCFCF;
+  border-radius: 5px;
+  padding: 10px 0;
+  max-height: calc(100vh - 380px);
+  overflow-y: auto;
+}
+
+.primaryModal .selectionWrap .item {
+  margin: 1px 0;
+}
+
+.primaryModal .selectionWrap .item label {
+  padding: 10px 15px;
+  font-weight: normal;
+  font-size: 15px;
+  padding-right: 55px;
+}
+
+.primaryModal .selectionWrap .item label:focus, .primaryModal .selectionWrap .item label:hover {
+  background-color: #E9ECEF;
+}
+
+.primaryModal .selectionWrap [type="radio"]:checked + label:before,
+.primaryModal .selectionWrap [type="radio"]:not(:checked) + label:before,
+.primaryModal .selectionWrap [type="radio"]:checked + label:after,
+.primaryModal .selectionWrap [type="radio"]:not(:checked) + label:after {
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.primaryModal .selectionWrap [type="radio"]:checked + label:before,
+.primaryModal .selectionWrap [type="radio"]:not(:checked) + label:before {
+  right: 15px;
+  border-color: #c1c1c1;
+}
+
+.primaryModal .selectionWrap [type="radio"]:checked + label:after,
+.primaryModal .selectionWrap [type="radio"]:not(:checked) + label:after {
+  right: 20px;
+}
+
+.primaryModal .selectionWrap [type="radio"]:checked + label {
+  background: #E9ECEF;
+}
+
+.primaryModal .mainBtn {
+  padding: 10px 30px;
+}
+
+.primaryModal .mainBtn.cancel {
+  background: transparent;
+  color: #555;
+  border: solid 1px #555;
+  padding: 8px 28px;
 }
 /*# sourceMappingURL=curriculum.css.map */

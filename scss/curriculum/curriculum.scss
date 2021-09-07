@@ -34,32 +34,6 @@
             }
         }
     }
-    .roundedLabel{
-        border-radius: 50px;
-        color: #fff;
-        font-size: 13px;
-        padding: 2px 9px;
-        white-space: nowrap;
-        display: inline-block;
-        margin-left: 2px;
-        background: #ccc;
-        &.public{
-            background: #51459F;
-        }
-        &.private{
-            background: #079698;
-        }
-        &.active{
-            background: #2EA44E;
-        }
-        &.draft{
-            background: #F83F3F;
-        }
-        &.count{
-            background: #FC6D00;
-            font-size: 14px;
-        }
-    }
     .primaryBtn{
         padding: 9px 20px;
         background-color: #2EA44E;
@@ -179,64 +153,91 @@
             }
         }
     }
-}
 
-.accordion{
-    padding-bottom: 120px;
-    .accordion-item{
-        border: none;
-        border-bottom: solid 1px #DCDCDC;
-        margin-bottom: 0;
-        .accordion-header{
-            .accTitle{
-                font-size: 20px;
-                font-weight: 500;
-            }
-            .roundedLabel{
-                margin-right: 30px;
-            }
-            .accordion-button{
-                width: auto;
-                border-left: solid 1px #DCDCDC;
-                border-right: solid 1px #DCDCDC;
-                padding: 24px 24px;
-                &:focus{
-                    box-shadow: none;
+    .grid-col{
+        flex: 0 0 auto;
+        width: 20%;
+    }
+    
+    .accordion{
+        padding-bottom: 120px;
+        .accordion-item{
+            border: none;
+            border-bottom: solid 1px #DCDCDC;
+            margin-bottom: 0;
+            .accordion-header{
+                .accTitle{
+                    font-size: 20px;
+                    font-weight: 500;
                 }
-                &:not(.collapsed){
-                    background: #fff;
-                    box-shadow: none;
+                .roundedLabel{
+                    margin-right: 30px;
                 }
-                &::after{
-                    width: 36px;
-                    height: 36px;
-                    border: solid 2px #424242;
-                    background-position: center;
-                    border-radius: 50%;
-                    background-size: 18px;
+                .accordion-button{
+                    width: auto;
+                    border-left: solid 1px #DCDCDC;
+                    border-right: solid 1px #DCDCDC;
+                    padding: 24px 24px;
+                    &:focus{
+                        box-shadow: none;
+                    }
+                    &:not(.collapsed){
+                        background: #fff;
+                        box-shadow: none;
+                    }
+                    &::after{
+                        width: 36px;
+                        height: 36px;
+                        border: solid 2px #424242;
+                        background-position: center;
+                        border-radius: 50%;
+                        background-size: 18px;
+                    }
                 }
+                
             }
-            
-        }
-        .accordion-body{
-            padding: 20px;
-            background: #F6F8FE;
-            border: solid 1px #EFF2FC;
-        }
-        &:nth-child(2) .accordion-body{
-            background: #FFF9FC;
-            border-color: #F9E5EA;
-        }
-        &:nth-child(3) .accordion-body{
-            background: #FFFBEC;
-            border-color: #EFE0CA;
+            .accordion-body{
+                padding: 20px;
+                background: #F6F8FE;
+                border: solid 1px #EFF2FC;
+            }
+            &:nth-child(2) .accordion-body{
+                background: #FFF9FC;
+                border-color: #F9E5EA;
+            }
+            &:nth-child(3) .accordion-body{
+                background: #FFFBEC;
+                border-color: #EFE0CA;
+            }
         }
     }
 }
 
-.grid-col{
-    flex: 0 0 auto;
-    width: 20%;
+.roundedLabel{
+    border-radius: 50px;
+    color: #fff;
+    font-size: 13px;
+    padding: 2px 9px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 2px;
+    background: #ccc;
+    &.public{
+        background: #51459F;
+    }
+    &.private{
+        background: #079698;
+    }
+    &.active{
+        background: #2EA44E;
+    }
+    &.draft{
+        background: #F83F3F;
+    }
+    &.count{
+        background: #FC6D00;
+        font-size: 14px;
+    }
 }
 
 .tabHead{
@@ -393,7 +394,6 @@
     }
 }
 
-
 .customRadio{
     padding: 5px 0;
     .item{
@@ -445,7 +445,7 @@
         transition: all 0.2s ease;
     }
     [type="radio"]:checked + label:before{
-        border-color: #5D67E9;
+        border-color: #5D67E9 !important;
     }
     [type="radio"]:not(:checked) + label:after {
         opacity: 0;
@@ -456,5 +456,80 @@
         opacity: 1;
         -webkit-transform: scale(1);
         transform: scale(1);
+    }
+}
+
+.primaryModal{
+    max-width: 550px;
+    .modal-body{
+        padding: 30px 38px;
+    }
+    .roundedLabel{
+        color: #FC6D00;
+        border: solid 1px #FC6D00;
+        background: transparent;
+        font-size: 14px;
+        padding: 4px 15px;
+    }
+    .heading{
+        font-size: 24px;
+        font-weight: 500;
+        border-bottom: solid 1px #A1A1A1;
+        padding: 5px 0;
+    }
+    .breadcrumb{
+        font-size: 16px;
+        font-weight: 500;
+        margin: 15px 0;
+        color: #666;
+    }
+    .selectionWrap{
+        border: solid 1px #CFCFCF;
+        border-radius: 5px;
+        padding: 10px 0;
+        max-height: calc(100vh - 380px);
+        overflow-y: auto;
+        .item{
+            margin: 1px 0;
+            label{
+                padding: 10px 15px;
+                font-weight: normal;
+                font-size: 15px;
+                padding-right: 55px;
+                &:focus,
+                &:hover{
+                    background-color: #E9ECEF;
+                }
+            }
+        }
+        [type="radio"]:checked + label:before, 
+        [type="radio"]:not(:checked) + label:before,
+        [type="radio"]:checked + label:after, 
+        [type="radio"]:not(:checked) + label:after{
+            left: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        [type="radio"]:checked + label:before, 
+        [type="radio"]:not(:checked) + label:before{
+            right: 15px; 
+            border-color: #c1c1c1;
+        }
+        [type="radio"]:checked + label:after, 
+        [type="radio"]:not(:checked) + label:after{
+            right: 20px;
+        }
+        [type="radio"]:checked + label{
+            background: #E9ECEF;
+        }
+    }
+    .mainBtn{
+        padding: 10px 30px;
+        &.cancel{
+            background: transparent;
+            color: #555;
+            border: solid 1px #555;
+            padding: 8px 28px;
+        }
     }
 }
