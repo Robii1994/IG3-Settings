@@ -534,6 +534,8 @@
   background: transparent;
   font-size: 14px;
   padding: 4px 15px;
+  margin: 0;
+  white-space: inherit;
 }
 
 .primaryModal .heading {
