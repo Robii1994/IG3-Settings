@@ -210,7 +210,7 @@
   width: auto;
   border-left: solid 1px #DCDCDC;
   border-right: solid 1px #DCDCDC;
-  padding: 24px 24px;
+  padding: 22px 20px;
 }
 
 .curriculumWrap .accordion .accordion-item .accordion-header .accordion-button:focus {
@@ -307,8 +307,8 @@
 
 .tabHead .item .editBtn {
   border: solid 2px #2AC055;
-  width: 31px;
-  height: 31px;
+  width: 30px;
+  height: 30px;
   color: #2AC055;
   padding: 0;
   margin-left: 10px;
@@ -317,7 +317,7 @@
 }
 
 .tabHead .item .editBtn:hover {
-  background-color: #2AC055;
+  background-color: #1fa947;
   border-color: #1fa947;
   color: #fff;
 }
@@ -374,6 +374,7 @@
   background: #818181;
   border-radius: 50%;
   margin: 0 2px;
+  transition: background .3s ease;
 }
 
 .whiteBox .bottomPanel .moreBtn::after {
@@ -384,6 +385,10 @@
   outline: none;
   background-color: #ececec;
   border-radius: 3px;
+}
+
+.whiteBox .bottomPanel .moreBtn:hover span {
+  background: #000;
 }
 
 .whiteBox .bottomPanel .moreItems {
@@ -415,12 +420,21 @@
   font-size: 13px;
 }
 
+.whiteBox .bottomPanel .moreItems li .btn svg {
+  margin-right: 8px;
+}
+
+.whiteBox .bottomPanel .moreItems li .btn:active {
+  background-color: #e9ecef;
+}
+
 .whiteBox .bottomPanel .moreItems li .btn.edit {
   color: #2AC055;
 }
 
 .whiteBox .bottomPanel .moreItems li .btn.edit .icon {
   color: #2AC055;
+  font-size: 13px;
 }
 
 .whiteBox .bottomPanel .moreItems li .btn.delete {
