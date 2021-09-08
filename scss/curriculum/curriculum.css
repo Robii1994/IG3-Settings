@@ -168,6 +168,11 @@
   background: #5D67E9;
 }
 
+.curriculumWrap .controlsBlock [type="radio"]:checked + label,
+.curriculumWrap .controlsBlock [type="radio"]:not(:checked) + label {
+  font-weight: 500;
+}
+
 .curriculumWrap .publicBlock {
   margin: 0 0 30px;
 }
@@ -476,7 +481,7 @@
   line-height: 22px;
   display: inline-block;
   color: #333;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
 }
 
@@ -518,6 +523,64 @@
 .customRadio [type="radio"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
+}
+
+.customCheckbox .item {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  margin-right: 20px;
+}
+
+.customCheckbox .item:last-child {
+  margin-right: 0;
+}
+
+.customCheckbox .item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.customCheckbox .item input:checked ~ .checkmark {
+  background-color: #5D67E9;
+  border-color: #5D67E9;
+}
+
+.customCheckbox .item input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.customCheckbox .item .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.customCheckbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: solid 1px #8F8F8F;
+  border-radius: 3px;
+}
+
+.customCheckbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .primaryModal {
@@ -608,5 +671,30 @@
   color: #555;
   border: solid 1px #555;
   padding: 8px 28px;
+}
+
+.defaultForm {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.defaultForm .customRadio [type="radio"]:checked + label:before,
+.defaultForm .customRadio [type="radio"]:not(:checked) + label:before {
+  width: 20px;
+  height: 20px;
+}
+
+.defaultForm .customRadio [type="radio"]:checked + label:after,
+.defaultForm .customRadio [type="radio"]:not(:checked) + label:after {
+  width: 10px;
+  height: 10px;
+}
+
+.defaultForm .customRadio [type="radio"]:checked + label,
+.defaultForm .customRadio [type="radio"]:not(:checked) + label {
+  line-height: 20px;
+  padding-left: 27px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=curriculum.css.map */
