@@ -258,8 +258,9 @@
         font-weight: 500;
         margin-right: 25px;
         color: #222;
+        cursor: pointer;
         &.active{
-            border-bottom-color: #5D67E9 ;
+            border-bottom-color: #5D67E9;
         }
         &:last-child{
             margin-right: 0;
@@ -272,7 +273,12 @@
             padding: 0;
             margin-left: 10px;
             background: #fff;
-            font-size: 13px;
+            font-size: 12px;
+            &:hover{
+                background-color: #2AC055;
+                border-color: #1fa947;
+                color: #fff;
+            }
         }
     }
 }
@@ -283,6 +289,13 @@
     background-color: #fff;
     padding: 12px 12px;
     cursor: pointer;
+    transition: border-color .3s ease;
+    &:hover{
+        border-color: rgba(93,103,233,0.68);
+    }
+    &.selected{
+        border-color: #5D67E9;
+    }
     .title{
         font-size: 16px;
         font-weight: 500;
@@ -362,9 +375,6 @@
                 }
             }
         }
-    }
-    &.selected{
-        border-color: #5D67E9;
     }
 }
 

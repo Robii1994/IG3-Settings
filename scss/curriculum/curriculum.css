@@ -294,6 +294,7 @@
   font-weight: 500;
   margin-right: 25px;
   color: #222;
+  cursor: pointer;
 }
 
 .tabHead .item.active {
@@ -312,7 +313,13 @@
   padding: 0;
   margin-left: 10px;
   background: #fff;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.tabHead .item .editBtn:hover {
+  background-color: #2AC055;
+  border-color: #1fa947;
+  color: #fff;
 }
 
 .whiteBox {
@@ -321,6 +328,15 @@
   background-color: #fff;
   padding: 12px 12px;
   cursor: pointer;
+  transition: border-color .3s ease;
+}
+
+.whiteBox:hover {
+  border-color: rgba(93, 103, 233, 0.68);
+}
+
+.whiteBox.selected {
+  border-color: #5D67E9;
 }
 
 .whiteBox .title {
@@ -414,10 +430,6 @@
 .whiteBox .bottomPanel .moreItems li .btn.delete .icon {
   color: #EB0101;
   font-size: 15px;
-}
-
-.whiteBox.selected {
-  border-color: #5D67E9;
 }
 
 .publishBlock {
