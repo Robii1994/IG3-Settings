@@ -193,10 +193,30 @@
                     &::after{
                         width: 36px;
                         height: 36px;
-                        border: solid 2px #424242;
+                        border: solid 2px #888;
                         background-position: center;
                         border-radius: 50%;
-                        background-size: 18px;
+                        background: none;
+                        position: relative;
+                    }
+                    &::before{
+                        content: "";
+                        border: solid #888;
+                        border-width: 0 2px 2px 0;
+                        display: inline-block;
+                        padding: 4px;
+                        transform: rotate(45deg) translate(-50%, -50%);
+                        position: absolute;
+                        left: 44%;
+                        top: 50%;
+                    }
+                    &:not(.collapsed)::after{
+                        border-color: #5D67E9;
+                    }
+                    &:not(.collapsed)::before{
+                        transform: rotate(223deg);
+                        border-color: #5D67E9;
+                        top: 48%;
                     }
                 }
                 
@@ -635,6 +655,23 @@
             line-height: 20px;
             padding-left: 27px;
             font-size: 14px;
+        }
+    }
+}
+.sideMenu{
+    .menuWrap{
+        li{
+            a{
+                svg{
+                    fill: #7B7B7B;
+                }
+                &.active,
+                &:hover{
+                    svg{
+                        fill: #5D67E9;
+                    }
+                }
+            }
         }
     }
 }
